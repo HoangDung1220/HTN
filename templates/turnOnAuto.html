@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="30">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+    <title>Lampada</title>
+</head>
+
+<body>
+    <div class="content">
+        
+        {% if state_lamp %}
+        <img src="{{ url_for('static', filename = ''/img/lamp-on_blue.png') }}" id="bluelamp" />
+        <img src="{{ url_for('static', filename = '/img/lamp-on.png') }}" id="yellowlamp" />
+        {% endif %}
+        {% if state_lamp == False %}
+        <img src="{{ url_for('static', filename = '/img/lamp.png') }}" id="bluelamp" />
+        <img src="{{ url_for('static', filename = '/img/lamp.png') }}" id="yellowlamp" />
+        {% endif %}
+    </div>
+    <!-- <script src="{{ url_for('static', filename = 'script.js') }}"></script> -->
+</body>
+
+</html>
